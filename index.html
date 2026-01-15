@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Japan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1e88e5;
+      --accent: #f48fb1;
+      --bg: #f6f9fb;
+      --dark: #1a1a1a;
+      --gray: #777;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--gray);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url("https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: #eee;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 36px;
+      background: var(--primary);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1565c0;
+      transform: translateY(-3px);
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+      border-radius: 40px;
+      text-align: center;
+    }
+
+    /* TESTIMONI */
+    .testimonial {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .stars {
+      color: #ffc107;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d1b2a;
+      color: #ccc;
+      text-align: center;
+      padding: 50px 8%;
+    }
+
+    /* ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.8s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="fade-up">
+      <h1>Explore Japan</h1>
+      <p>Jelajahi keindahan Jepang dari kota modern hingga budaya tradisional.</p>
+      <a href="#destinasi" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- DESTINASI -->
+  <section id="destinasi">
+    <h2 class="fade-up">Destinasi Populer Jepang</h2>
+    <div class="grid">
+      <div class="card fade-up">
+        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>Tokyo</h3>
+          <p>Kota modern & futuristik</p>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <img src="https://images.unsplash.com/photo-1526481280690-7ead5f7c40e1?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>Kyoto</h3>
+          <p>Budaya & kuil tradisional</p>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <img src="https://images.unsplash.com/photo-1505069442586-f0d1a6b2a6c1?auto=format&fit=crop&w=800&q=80">
+        <div class="card-content">
+          <h3>Gunung Fuji</h3>
+          <p>Ikon alam Jepang</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about fade-up">
+    <h2>Tentang Wisata Jepang</h2>
+    <p>
+      Jepang menawarkan perpaduan sempurna antara tradisi, teknologi, dan keindahan alam.
+      Dari musim sakura hingga salju di Hokkaido, semuanya Instagramable.
+    </p>
+  </section>
+
+  <!-- GALERI -->
+  <section>
+    <h2 class="fade-up">Galeri Jepang</h2>
+    <div class="grid">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1510337550647-e84f83e341ca?auto=format&fit=crop&w=800&q=80">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=800&q=80">
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section>
+    <h2 class="fade-up">Testimoni Traveler</h2>
+    <div class="grid">
+      <div class="testimonial fade-up">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/45.jpg">
+          <div>
+            <strong>Alya</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>Semua fotonya tampil sempurna. Desainnya modern dan nyaman dilihat.</p>
+      </div>
+
+      <div class="testimonial fade-up">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/men/36.jpg">
+          <div>
+            <strong>Rafi</strong>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p>Cocok banget buat website wisata Jepang. Visualnya bersih dan aesthetic.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Explore Japan. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
